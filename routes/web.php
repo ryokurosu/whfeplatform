@@ -24,6 +24,7 @@ Route::get('/fx', 'HomeController@fx')->name('fx');
 Route::get('/delivary', 'HomeController@delivary')->name('delivary');
 Route::get('/getcsv', 'AdminController@getUserCsv')->name('get.csv');
 Route::get('/getcsvPrepend', 'AdminController@getPrependUserCsv')->name('get.csv.prepend');
+Route::get('/getusercsv', 'AdminController@getUserAllCsv');
 Route::post('/fx', 'HomeController@userSetAccount')->name('user.set.account');
 Route::post('/usersetter', 'AdminController@userSetKeyValue');
 Route::get('/download/{filename}', 'ActionController@download');

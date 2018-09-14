@@ -55,8 +55,26 @@ class AdminController extends Controller
       return $user->userSetter($request->key,$request->value);
     }
 
+    public function getUserCsv(){
+      $users = User::query()->get(['id','name', 'email','account','zipcode','address','tel','birthday'])->toArray();
+      $csvHeader = ['ID', '名前','アドレス','口座番号','郵便番号','住所','電話番号','生年月日'];
+      array_unshift($users, $csvHeader);   
+      $stream = fopen('php://temp', 'r+b');
+      foreach ($users as $user) {
+        fputcsv($stream, $user);
+      }
+      rewind($stream);
+      $csv = str_replace(PHP_EOL, "\r\n", stream_get_contents($stream));
+      $csv = mb_convert_encoding($csv, 'SJIS-win', 'UTF-8');
+      $headers = array(
+        'Content-Type' => 'text/csv',
+        'Content-Disposition' => 'attachment; filename="users.csv"',
+      );
+      return \Response::make($csv, 200, $headers);
+    }
+
     public function getUserAllCsv(){
-      $users = User::where('account','!=','')->get(['id','name', 'email', 'password','fx','auth','delivary','account','affiliater_id','gender','address','tel','birthday','zipcode'])->toArray();
+      $users = User::where('id','!=','0')->get(['id','name', 'email', 'password','fx','auth','delivary','account','affiliater_id','gender','address','tel','birthday','zipcode'])->toArray();
       $output = [];
       foreach ($users as $user) {
         if(isset($user['account']) && \File::exists(storage_path() . "/app/downloads/" . $user['account'] ."_Tiger_v1.0.ex4")){
