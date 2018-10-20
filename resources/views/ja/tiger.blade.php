@@ -43,18 +43,16 @@
             <p>月間収益率: 3.2%</p>
           </div>
           <div id="tab3" class="tab-pane">
-            <div class="iframe-wrap">
-              <iframe src="{{url('/backtest/tiger.pdf')}}" width="100%" height="375"></iframe>
+            <embed src="{{url('/backtest/tiger.pdf')}}" width="100%" height="375">
+            <a href="{{url('/backtest/tiger.pdf')}}">詳細(PDF)</a>
             </div>
-            <a href="{{url('/backtest/tiger.pdf')}}">PDF</a>
           </div>
-        </div>
-        <div class="open-account-container">
-          <a class="btn btn-primary big" href="{{route('tiger.open')}}">Open an account</a>
+          <div class="open-account-container">
+            <a class="btn btn-primary big" href="{{route('tiger.open')}}">Open an account</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 @endsection

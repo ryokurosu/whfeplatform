@@ -42,6 +42,7 @@
           </div>
           <div id="tab3" class="tab-pane">
             <embed src="{{url('/backtest/shark.pdf')}}" width="100%" height="375">
+              <a href="{{url('/backtest/shark.pdf')}}">詳細(PDF)</a>
             </div>
           </div>
           <div class="open-account-container">
