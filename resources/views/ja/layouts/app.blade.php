@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="ja">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,6 +24,7 @@
     integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
     crossorigin="anonymous"></script>
     <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
     <link href="{{ asset('css/dropzone.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -60,79 +61,93 @@
                         <li><a href="{{ route('login') }}">LOGIN</a></li>
                         <li><a href="{{ route('register') }}">REGISTER</a></li>
                         @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
+                        <li>
+                            <a href="{{route('welcome')}}">
+                                トップ
                             </a>
-
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="{{route('fx')}}">
-                                        FX
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{route('delivary')}}">
-                                        Delivary
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
-                                    ログアウト
-                                </a>
-                                <li>
-                                    <a href="mailto:delivery.option.lenis@gmail.com">
-                                        サポート（メール）
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://line.me/R/ti/p/%40zez4436s">
-                                        サポート（LINE@）
-                                    </a>
-                                </li>
-                                <li>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        {{ csrf_field() }}
-                                    </form>
-                                </li>
-                                @if(Auth::user()->isAdmin())
-                                <li>
-                                    <a href="{{route('admin')}}">
-                                        管理者ページ
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{route('affiliater')}}">
-                                        代理店管理
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{route('upload')}}">
-                                        ファイルアップロード
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{route('filelist')}}">
-                                        ファイル一覧
-                                    </a>
-                                </li>
-                                @endif
-                            </ul>
                         </li>
-                        @endif
-                         <li class="language"><a href="{{ url()->current().'?lang=en' }}">EN</a> / <a class="selected-link">JA</a></li>
+                        <li>
+                            <a href="{{route('register')}}">
+                                登録
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('home')}}">
+                                マイページ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('fx')}}">
+                                FX
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:delivery.option.lenis@gmail.com">
+                                サポート(E-mail)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                            Logout
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
 
-                    </ul>
-                </div>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="https://line.me/R/ti/p/%40zez4436s">
+                                    サポート（LINE@）
+                                </a>
+                            </li>
+                            @if(Auth::user()->isAdmin())
+                            <li>
+                                <a href="{{route('admin')}}">
+                                    管理者ページ
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('usersystem')}}">
+                                    利用システム確認
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('affiliater')}}">
+                                    代理店管理
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('upload')}}">
+                                    ファイルアップロード
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('filelist')}}">
+                                    ファイル一覧
+                                </a>
+                            </li>
+                            @endif
+                        </ul>
+                    </li>
+                    @endif
+                    <li class="language"><a href="{{ url()->current().'?lang=en' }}">EN</a> / <a class="selected-link">JA</a></li>
+
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        @yield('content')
-    </div>
+    @yield('content')
+</div>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use App\Affiliater;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -37,7 +40,64 @@ class HomeController extends Controller
     }
 
     public function index(){
-        return redirect()->route('fx');
+        return $this->viewer('home');
+    }
+    public function news(){
+        return $this->viewer('news');
+    }
+    public function tiger(){
+        return $this->viewer('tiger');
+    }
+    public function tigerOpenAccount(){
+        $user = Auth::user();
+        $systemid = 1;
+        $user->systems()->sync([$systemid], false);
+        return $this->viewer('openaccount');
+    }
+    public function elephant(){
+        return $this->viewer('elephant');
+    }
+    public function elephantOpenAccount(){
+        $user = Auth::user();
+        $systemid = 2;
+        $user->systems()->sync([$systemid], false);
+        return $this->viewer('openaccount');
+    }
+    public function turtle(){
+        return $this->viewer('turtle');
+    }
+    public function turtleOpenAccount(){
+        $user = Auth::user();
+        $systemid = 3;
+        $user->systems()->sync([$systemid], false);
+        return $this->viewer('openaccount');
+    }
+    public function shark(){
+        return $this->viewer('shark');
+    }
+    public function sharkOpenAccount(){
+        $user = Auth::user();
+        $systemid = 4;
+        $user->systems()->sync([$systemid], false);
+        return $this->viewer('openaccount');
+    }
+    public function cobra(){
+        return $this->viewer('cobra');
+    }
+    public function cobraOpenAccount(){
+        $user = Auth::user();
+        $systemid = 5;
+        $user->systems()->sync([$systemid], false);
+        return $this->viewer('openaccount');
+    }
+    public function eagle(){
+        return $this->viewer('eagle');
+    }
+    public function eagleOpenAccount(){
+        $user = Auth::user();
+        $systemid = 6;
+        $user->systems()->sync([$systemid], false);
+        return $this->viewer('openaccount');
     }
 
 }

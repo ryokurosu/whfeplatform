@@ -46,5 +46,9 @@ class User extends Authenticatable
     public function affiliater(){
         return $this->belongsTo('App\Affiliater');
     }
+    public function systems()
+    {
+        return $this->belongsToMany('App\System');
+    }
 
 }

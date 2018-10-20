@@ -37,6 +37,11 @@ class AdminController extends Controller
       $users = User::with('affiliater')->get();
       return $this->viewer('admin',['users' => $users]);
     }
+    public function usersystem()
+    {
+      $users = User::with(['systems','affiliater'])->get();
+      return $this->viewer('usersystem',['users' => $users]);
+    }
     public function submit(Request $request)
     {
       $id = Auth::id();

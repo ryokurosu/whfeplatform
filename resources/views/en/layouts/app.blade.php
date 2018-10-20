@@ -24,6 +24,7 @@
     integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
     crossorigin="anonymous"></script>
     <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
     <link href="{{ asset('css/dropzone.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -50,7 +51,7 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        <!-- / -->
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -60,79 +61,100 @@
                         <li><a href="{{ route('login') }}">LOGIN</a></li>
                         <li><a href="{{ route('register') }}">REGISTER</a></li>
                         @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
+                        <li>
+                            <a href="{{route('welcome')}}">
+                                Top
                             </a>
-
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="{{route('fx')}}">
-                                        FX
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{route('delivary')}}">
-                                        Delivary
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
-                                    LOGOUT
-                                </a>
-                                <li>
-                                    <a href="mailto:delivery.option.lenis@gmail.com">
-                                        Support（E-Mail）
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://line.me/R/ti/p/%40zez4436s">
-                                        Support（LINE@）
-                                    </a>
-                                </li>
-                                <li>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        {{ csrf_field() }}
-                                    </form>
-                                </li>
-                                @if(Auth::user()->isAdmin())
-                                <li>
-                                    <a href="{{route('admin')}}">
-                                        Admin page
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{route('affiliater')}}">
-                                        Affiliater manage
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{route('upload')}}">
-                                        file upload
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{route('filelist')}}">
-                                        file index
-                                    </a>
-                                </li>
-                                @endif
-                            </ul>
                         </li>
-                        @endif
-                        <li class="language"><a class="selected-link">EN</a> / <a href="{{url()->current() . '?lang=ja'}}">JA</a></li>
+                        <li>
+                            <a href="{{route('register')}}">
+                                Account Opening
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('home')}}">
+                                Mypage
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('fx')}}">
+                                FX
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:delivery.option.lenis@gmail.com">
+                                Contact（E-mail）
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                            Logout
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
 
-                    </ul>
-                </div>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="{{route('delivary')}}">
+                                    Delivary
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="https://line.me/R/ti/p/%40zez4436s">
+                                    Support（LINE@）
+                                </a>
+                            </li>
+                            @if(Auth::user()->isAdmin())
+                            <li>
+                                <a href="{{route('admin')}}">
+                                    Admin page
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('usersystem')}}">
+                                    User System check
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('affiliater')}}">
+                                    Affiliater manage
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('upload')}}">
+                                    file upload
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('filelist')}}">
+                                    file index
+                                </a>
+                            </li>
+                            @endif
+                        </ul>
+                    </li>
+                    @endif
+                    <li class="language"><a class="selected-link">EN</a> / <a href="{{url()->current() . '?lang=ja'}}">JA</a></li>
+
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        @yield('content')
-    </div>
+    @yield('content')
+</div>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
