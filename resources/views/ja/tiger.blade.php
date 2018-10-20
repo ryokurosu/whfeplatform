@@ -44,7 +44,7 @@
           </div>
           <div id="tab3" class="tab-pane">
             <iframe src="{{url('/backtest/tiger.pdf')}}" width="100%" height="375"></iframe>
-            <a href="{{url('/backtest/tiger.pdf')}}">PDF</a>a
+            <a href="{{url('/backtest/tiger.pdf')}}">PDF</a>
             </div>
           </div>
           <div class="open-account-container">
