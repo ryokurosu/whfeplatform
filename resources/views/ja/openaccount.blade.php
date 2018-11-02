@@ -7,7 +7,9 @@
       <div class="panel panel-default">
        <div class="panel-heading">利用申請を承りました</div>
        <div class="panel-body">
-        <img src="/image/Savannah-FX.gif" alt="Savannah-FX">
+         <p class="text-center">
+          <img src="/image/Savannah-FX.gif" alt="Savannah-FX">
+        </p>
         <p>登録いただいたメールアドレスにメールを送らせていただきましたのでご確認ください。（届かない場合は迷惑メールフォルダに入っている可能性があります。）</p>
         <p></p>
         <p>添付したメールの内容は以下の通りです。</p>

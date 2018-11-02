@@ -15,7 +15,7 @@
             <a href="#tab2" class="nav-link" data-toggle="tab">Evidence</a>
           </li>
           <li class="nav-item">
-            <a href="#tab3" class="nav-link" data-toggle="tab">Platform</a>
+            <a href="#tab3" class="nav-link" data-toggle="tab">Backtest</a>
           </li>
         </ul>
         <div class="tab-content">

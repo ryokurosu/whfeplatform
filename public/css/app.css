@@ -354,3 +354,22 @@ input[type="radio"]:checked + .checkbox-label,input[type="checkbox"]:checked + .
 iframe{
 	max-width: 100%;
 }
+
+@media screen and (min-width:1200px){
+	.panel-default {
+    background: #323e4c;
+}
+
+.panel-default .panel-heading {
+    border-bottom: 1px solid #fff;
+}
+.btn-primary{
+	margin-bottom:16px;
+}
+}
+.clear {
+    clear: both;
+}
+.title.m-b-md {
+    text-align: center;
+}

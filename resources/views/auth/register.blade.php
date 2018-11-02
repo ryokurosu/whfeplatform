@@ -36,6 +36,7 @@
                                     <strong>{{ $errors->first('email') }}</strong>
                                 </span>
                                 @endif
+                                <small>You can use only "gmail" registration.</small>
                             </div>
                         </div>
 
@@ -50,6 +51,7 @@
                                     <strong>{{ $errors->first('zipcode') }}</strong>
                                 </span>
                                 @endif
+                                <small>ex.111−1111</small>
                             </div>
                         </div>
 
@@ -220,7 +222,10 @@ Article 13 (Confidentiality)
 (4) What was accepted by the other party in writing
 3 The confidentiality obligation of this Article shall survive the termination of this Agreement.
 
-Article 14 (Competent jurisdiction)
+Article 14 (Law interpretation) 
+This agreement is in accordance with Japanese law and interpreted in accordance with Japanese law
+
+Article 15 (Competent jurisdiction)
 Any dispute concerning this Agreement (including the court 's mediation procedure) agrees to make the Tokyo Summary Court or Tokyo District Court the First Instance' s exclusive agreement jurisdiction court.
 
 I read carefully the full text of this Software License Agreement, fully understand it,
@@ -317,7 +322,9 @@ Rad Solutions Limited（以下「甲」という。）とwebユーザーイン�
 （4） 相手方から書面により開示を承諾されたもの
 3　本条の機密保持義務は、本契約が終了した後も存続するものとする。
 
-第14条（合意管轄）
+第14条（法解釈） 本契約は、日本法に準拠し、日本法に従って解釈される
+
+第15条（合意管轄）
 本契約に関する一切の紛争（裁判所の調停手続きを含む。）は、東京簡易裁判所又は東京地方裁判所を第一審の専属的合意管轄裁判所とすることに合意する。
 
 私は、本ソフトウェア使用許諾契約書全文を注意深く読み、完全に理解した上で、

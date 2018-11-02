@@ -7,7 +7,9 @@
       <div class="panel panel-default">
        <div class="panel-heading">Application completed</div>
        <div class="panel-body">
-        <img src="/image/Savannah-FX.gif" alt="Savannah-FX">
+        <p class="text-center">
+          <img src="/image/Savannah-FX.gif" alt="Savannah-FX">
+        </p>
         <p>We have received application for use.</p>
         <p>Please confirm that you have sent an e-mail to the registered e-mail address. (If it does not arrive it may be in the junk mail folder.)</p>
         <p></p>
