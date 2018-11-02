@@ -354,6 +354,10 @@ input[type="radio"]:checked + .checkbox-label,input[type="checkbox"]:checked + .
 iframe{
 	max-width: 100%;
 }
+.slick-slider {
+    padding: 0;
+    background: #000;
+}
 
 @media screen and (min-width:1200px){
 	.panel-default {

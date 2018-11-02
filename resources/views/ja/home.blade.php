@@ -12,7 +12,18 @@
       </p>
       @endif
       <div class="panel panel-default">
-        <img src="/image/3357.jpg" alt="Savannah FX">
+        <ul id="slider">
+          <li>
+            <a href="{{route('fx')}}">
+              <img src="/image/3357.jpg" alt="Savannah FX">
+            </a>
+          </li>
+          <li>
+            <a href="{{route('tiger')}}">
+              <img src="/image/yellowtiger.png" alt="Savannah FX">
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
     <div class="clear"></div>

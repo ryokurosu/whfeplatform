@@ -4,6 +4,9 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+      <div class="panel panel-default">
+        <img src="/image/yellowtiger.png" alt="Yellow Tiger">
+      </div>
       <div class="panel panel-default tiger">
        <div class="panel-heading">Tiger</div>
        <div class="panel-body">
@@ -44,7 +47,7 @@
           </div>
           <div id="tab3" class="tab-pane">
             <embed src="{{url('/backtest/tiger.pdf')}}" width="100%" height="375">
-            <a href="{{url('/backtest/tiger.pdf')}}">詳細(PDF)</a>
+              <a href="{{url('/backtest/tiger.pdf')}}">詳細(PDF)</a>
             </div>
           </div>
           <div class="open-account-container">
