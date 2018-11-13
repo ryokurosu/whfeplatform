@@ -22,6 +22,7 @@
                                     <strong>{{ $errors->first('name') }}</strong>
                                 </span>
                                 @endif
+                                <small>ex)JOHNSMITH</small>
                             </div>
                         </div>
 
@@ -36,7 +37,7 @@
                                     <strong>{{ $errors->first('email') }}</strong>
                                 </span>
                                 @endif
-                                <small>You can use only "gmail" registration.</small>
+                                <small>You can use only "gmail" registration.<br>ex)1111@gmail.com</small>
                             </div>
                         </div>
 
@@ -51,7 +52,7 @@
                                     <strong>{{ $errors->first('zipcode') }}</strong>
                                 </span>
                                 @endif
-                                <small>ex.111−1111</small>
+                                <small>ex)111−1111</small>
                             </div>
                         </div>
 
@@ -66,6 +67,7 @@
                                     <strong>{{ $errors->first('address') }}</strong>
                                 </span>
                                 @endif
+                                <small>ex)USAWASeattleAppleStreet1-1-1-1002</small>
                             </div>
                         </div>
 
@@ -78,6 +80,7 @@
                                     <strong>{{ $errors->first('tel') }}</strong>
                                 </span>
                                 @endif
+                                <small>ex）000-1111-2222</small>
                             </div>
                         </div>
 
