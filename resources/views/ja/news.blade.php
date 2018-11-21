@@ -19,7 +19,7 @@
           <small>2018/03/16</small>
           <h2>sharkが更新されました。</h2>
         </div>
-        <div class="news-column">
+        <!-- <div class="news-column">
           <small>2018/03/16</small>
           <h2>eagleが更新されました。</h2>
         </div>
@@ -30,7 +30,7 @@
         <div class="news-column">
           <small>2017/07/09</small>
           <h2>elephantが更新されました。</h2>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

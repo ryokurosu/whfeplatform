@@ -377,3 +377,30 @@ iframe{
 .title.m-b-md {
     text-align: center;
 }
+.coming-soon {
+    background: transparent !important;
+}
+
+h1#coming-soon-title {
+    display: inline-block;
+    position: relative;
+}
+
+h1#coming-soon-title:before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 10px;
+    height: 2px;
+    background: white;
+}
+h1#coming-soon-title:after {
+    content: '';
+    position: absolute;
+    bottom: -24px;
+    left: 25px;
+    right: -90px;
+    height: 2px;
+    background: white;
+}

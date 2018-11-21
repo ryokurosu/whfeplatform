@@ -15,7 +15,7 @@
         <ul id="slider">
           <li>
             <a href="{{route('fx')}}">
-              <img src="/image/3357.jpg" alt="Savannah FX">
+              <img src="/image/3357.png" alt="Savannah FX">
             </a>
           </li>
           <li>
@@ -44,14 +44,14 @@
         <small>2018/03/16</small>
         <h2>sharkが更新されました。</h2>
       </div>
-      <div class="news-column">
+     <!--  <div class="news-column">
         <small>2018/03/16</small>
         <h2>eagleが更新されました。</h2>
-      </div>
-      <div class="news-column">
+      </div> -->
+     <!--  <div class="news-column">
         <small>2017/10/23</small>
         <h2>coblaが更新されました。</h2>
-      </div>
+      </div> -->
       <a class="btn btn-primary" href="{{route('news')}}">Read More</a>
     </div>
   </div>

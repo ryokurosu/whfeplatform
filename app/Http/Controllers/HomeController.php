@@ -55,7 +55,8 @@ class HomeController extends Controller
         return $this->viewer('openaccount');
     }
     public function elephant(){
-        return $this->viewer('elephant');
+        // return $this->viewer('elephant');
+        return $this->viewer('comingsoon');
     }
     public function elephantOpenAccount(){
         $user = Auth::user();
@@ -82,7 +83,8 @@ class HomeController extends Controller
         return $this->viewer('openaccount');
     }
     public function cobra(){
-        return $this->viewer('cobra');
+        // return $this->viewer('cobra');
+         return $this->viewer('comingsoon');
     }
     public function cobraOpenAccount(){
         $user = Auth::user();
@@ -91,7 +93,8 @@ class HomeController extends Controller
         return $this->viewer('openaccount');
     }
     public function eagle(){
-        return $this->viewer('eagle');
+        // return $this->viewer('eagle');
+         return $this->viewer('comingsoon');
     }
     public function eagleOpenAccount(){
         $user = Auth::user();
