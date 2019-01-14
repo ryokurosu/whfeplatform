@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Affiliater;
+use App\System;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -26,7 +27,7 @@ class HomeController extends Controller
      */
     public function fx()
     {
-        return $this->viewer('fx');
+        return $this->viewer('fx',['systems' => System::all()]);
     }
 
     public function delivary()
@@ -45,62 +46,17 @@ class HomeController extends Controller
     public function news(){
         return $this->viewer('news');
     }
-    public function tiger(){
-        return $this->viewer('tiger');
+    public function systemdetail($name){
+        /*
+        if system detail or coming soon
+         */
+        $system = System::where('name',$name)->firstOrFail();
+        return $this->viewer('system.detail',['system' => $system]);
     }
-    public function tigerOpenAccount(){
+    public function systemOpenAccount($name){
         $user = Auth::user();
-        $systemid = 1;
+        $systemid = System::where('name',$name)->firstOrFail()->id;
         $user->systems()->sync([$systemid], false);
-        return $this->viewer('openaccount');
+        return $this->viewer('system.open');
     }
-    public function elephant(){
-        // return $this->viewer('elephant');
-        return $this->viewer('comingsoon');
-    }
-    public function elephantOpenAccount(){
-        $user = Auth::user();
-        $systemid = 2;
-        $user->systems()->sync([$systemid], false);
-        return $this->viewer('openaccount');
-    }
-    public function turtle(){
-        return $this->viewer('turtle');
-    }
-    public function turtleOpenAccount(){
-        $user = Auth::user();
-        $systemid = 3;
-        $user->systems()->sync([$systemid], false);
-        return $this->viewer('openaccount');
-    }
-    public function shark(){
-        return $this->viewer('shark');
-    }
-    public function sharkOpenAccount(){
-        $user = Auth::user();
-        $systemid = 4;
-        $user->systems()->sync([$systemid], false);
-        return $this->viewer('openaccount');
-    }
-    public function cobra(){
-        // return $this->viewer('cobra');
-         return $this->viewer('comingsoon');
-    }
-    public function cobraOpenAccount(){
-        $user = Auth::user();
-        $systemid = 5;
-        $user->systems()->sync([$systemid], false);
-        return $this->viewer('openaccount');
-    }
-    public function eagle(){
-        // return $this->viewer('eagle');
-         return $this->viewer('comingsoon');
-    }
-    public function eagleOpenAccount(){
-        $user = Auth::user();
-        $systemid = 6;
-        $user->systems()->sync([$systemid], false);
-        return $this->viewer('openaccount');
-    }
-
 }

@@ -30,6 +30,8 @@ return [
     | choice installed on your machine before you begin development.
     |
     */
+   
+   
 
     'connections' => [
 
@@ -49,7 +51,7 @@ return [
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
-            'prefix' => '',
+            'prefix' => env('DB_TABLE_PREFIX', 'ws_'),
             'strict' => true,
             'engine' => null,
         ],

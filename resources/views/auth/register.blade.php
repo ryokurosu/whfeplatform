@@ -134,7 +134,7 @@
                         <div class="consent-form">
                             <h3>Consent Form</h3>
                             <ul class="nav nav-tabs">
-         <li class="nav-item">
+         <li class="nav-item active">
           <a href="#tab1" class="nav-link active" data-toggle="tab">English</a>
         </li>
         <li class="nav-item">
@@ -343,7 +343,7 @@ Rad Solutions Limited（以下「甲」という。）とwebユーザーイン�
                             I agree to the Terms of Use.
                         </div>
                                 <button type="submit" id="register-button" class="btn btn-primary" disabled="true">
-                                    Register
+                                    REGISTER
                                 </button>
                     </form>
                 </div>

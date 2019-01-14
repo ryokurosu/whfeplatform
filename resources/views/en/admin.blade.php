@@ -21,10 +21,6 @@
               <th scope="col">E-Mail</th>
               <th scope="col">Affiliater</th>
               <th scope="col">Auth</th>
-              <th scope="col">FX Auth</th>
-              <th scope="col">FX Account number</th>
-              <th scope="col">EA FILE</th>
-              <th scope="col">DO Auth</th>
               <th scope="col">Address</th>
               <th scope="col">Tel</th>
               <th scope="col">Gender</th>
@@ -49,28 +45,6 @@
                @else
                最高管理者
                @endif
-             </td>
-             <td>
-               <select name="{{$user->id}}_fx">
-                 <option value="0" @if($user->fx == 0) selected @endif>None</option>
-                 <option value="1" @if($user->fx == 1) selected @endif>Red File</option>
-                 <option value="2" @if($user->fx == 2) selected @endif>Yellow File</option>
-               </select>
-             </td>
-             <td>{{$user->account}}</td>
-             <td>
-               @if(!is_null($user->account) && \File::exists(storage_path() . "/app/downloads/" . $user->account."_Tiger_v1.0.ex4"))
-               o
-               @else
-               x
-               @endif
-             </td>
-             <td>
-               <select name="{{$user->id}}_delivary">
-                 <option value="0" @if($user->delivary == 0) selected @endif>None</option>
-                 <option value="2" @if($user->delivary == 2) selected @endif>Red File</option>
-                 <option value="3" @if($user->delivary == 3) selected @endif>Yellow File</option>
-               </select>
              </td>
              <td>{{$user->address}}</td>
              <td>{{$user->tel}}</td>

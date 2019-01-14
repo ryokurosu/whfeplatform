@@ -7,30 +7,18 @@
       <div class="panel panel-default">
        <div class="panel-heading">News</div>
        <div class="panel-body">
-        <div class="news-column">
+         <div class="news-column">
           <small>2018/09/02</small>
-          <h2>tigerが更新されました。</h2>
+          <h2>Alpsが更新されました。</h2>
         </div>
         <div class="news-column">
           <small>2018/03/16</small>
-          <h2>turtleが更新されました。</h2>
+          <h2>Operaが更新されました。</h2>
         </div>
         <div class="news-column">
           <small>2018/03/16</small>
-          <h2>sharkが更新されました。</h2>
+          <h2>Barrierが更新されました。</h2>
         </div>
-        <!-- <div class="news-column">
-          <small>2018/03/16</small>
-          <h2>eagleが更新されました。</h2>
-        </div>
-        <div class="news-column">
-          <small>2017/10/23</small>
-          <h2>cobraが更新されました。</h2>
-        </div>
-        <div class="news-column">
-          <small>2017/07/09</small>
-          <h2>elephantが更新されました。</h2>
-        </div> -->
       </div>
     </div>
   </div>

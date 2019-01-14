@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class System extends Model
 {
-    protected $fillable = ['name','lname'];
+    protected $fillable = ['name','lname','colorcode'];
 }

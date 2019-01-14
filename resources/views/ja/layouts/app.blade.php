@@ -19,7 +19,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'HighLow') }}</title>
-   <script
+    <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
@@ -50,7 +50,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'HighLow') }}
+                        <img src="{{url('image/logo.png')}}" alt="{{ config('app.name', 'HighLow') }}">
                     </a>
                 </div>
 
@@ -73,34 +73,10 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{route('register')}}">
-                                登録
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{route('home')}}">
-                                マイページ
-                            </a>
-                        </li>
-                        <li>
                             <a href="{{route('fx')}}">
                                 FX
                             </a>
                         </li>
-                        <li>
-                            <a href="mailto:delivery.option.lenis@gmail.com">
-                                サポート(E-mail)
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
-                            Logout
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                {{ csrf_field() }}
-                            </form>
-                        </a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -109,11 +85,21 @@
 
                         <ul class="dropdown-menu" role="menu">
                             <li>
-                                <a href="https://line.me/R/ti/p/%40zez4436s">
+                                <a href="">
                                     サポート（LINE@）
                                 </a>
                             </li>
+                            <li>
+                                <a href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                ログアウト
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </a>
                             @if(Auth::user()->isAdmin())
+                            <hr>
                             <li>
                                 <a href="{{route('admin')}}">
                                     管理者ページ
@@ -127,16 +113,6 @@
                             <li>
                                 <a href="{{route('affiliater')}}">
                                     代理店管理
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('upload')}}">
-                                    ファイルアップロード
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('filelist')}}">
-                                    ファイル一覧
                                 </a>
                             </li>
                             @endif

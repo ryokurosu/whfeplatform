@@ -21,10 +21,6 @@
               <th scope="col">アドレス</th>
               <th scope="col">代理店</th>
               <th scope="col">管理者権限</th>
-              <th scope="col">FX権限</th>
-              <th scope="col">FX口座番号</th>
-              <th scope="col">EAファイル</th>
-              <th scope="col">DO権限</th>
               <th scope="col">住所</th>
               <th scope="col">電話番号</th>
               <th scope="col">性別</th>
@@ -49,28 +45,6 @@
                @else
                最高管理者
                @endif
-             </td>
-             <td>
-               <select name="{{$user->id}}_fx">
-                 <option value="0" @if($user->fx == 0) selected @endif>無し</option>
-                 <option value="1" @if($user->fx == 1) selected @endif>赤ファイル</option>
-                 <option value="2" @if($user->fx == 2) selected @endif>黄ファイル</option>
-               </select>
-             </td>
-             <td>{{$user->account}}</td>
-             <td>
-               @if(!is_null($user->account) && \File::exists(storage_path() . "/app/downloads/" . $user->account."_Tiger_v1.0.ex4"))
-               o
-               @else
-               x
-               @endif
-             </td>
-             <td>
-               <select name="{{$user->id}}_delivary">
-                 <option value="0" @if($user->delivary == 0) selected @endif>無し</option>
-                 <option value="2" @if($user->delivary == 2) selected @endif>赤ファイル</option>
-                 <option value="3" @if($user->delivary == 3) selected @endif>黄ファイル</option>
-               </select>
              </td>
              <td>{{$user->address}}</td>
              <td>{{$user->tel}}</td>

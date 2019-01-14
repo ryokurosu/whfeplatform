@@ -21,18 +21,8 @@ Route::get('/affiliater/add','AdminController@affiliaterAdd')->name('affiliater.
 Route::post('/affiliater/add','AdminController@affiliaterPost');
 Route::post('/admin','AdminController@submit');
 Route::get('/fx', 'HomeController@fx')->name('fx');
-Route::get('/fx/tiger', 'HomeController@tiger')->name('tiger');
-Route::get('/fx/tiger/open', 'HomeController@tigerOpenAccount')->name('tiger.open');
-Route::get('/fx/elephant', 'HomeController@elephant')->name('elephant');
-Route::get('/fx/elephant/open', 'HomeController@elephantOpenAccount')->name('elephant.open');
-Route::get('/fx/turtle', 'HomeController@turtle')->name('turtle');
-Route::get('/fx/turtle/open', 'HomeController@turtleOpenAccount')->name('turtle.open');
-Route::get('/fx/shark', 'HomeController@shark')->name('shark');
-Route::get('/fx/shark/open', 'HomeController@sharkOpenAccount')->name('shark.open');
-Route::get('/fx/eagle', 'HomeController@eagle')->name('eagle');
-Route::get('/fx/eagle/open', 'HomeController@eagleOpenAccount')->name('eagle.open');
-Route::get('/fx/cobra', 'HomeController@cobra')->name('cobra');
-Route::get('/fx/cobra/open', 'HomeController@cobraOpenAccount')->name('cobra.open');
+Route::get('/fx/{name}', 'HomeController@systemdetail')->name('system.detail');
+Route::get('/fx/{name}/open', 'HomeController@systemOpenAccount')->name('system.open');
 
 
 

@@ -17,15 +17,9 @@ class CreateSystemsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('lname');
+            $table->string('colorcode');
             $table->timestamps();
         });
-
-        \App\System::create(['name' => 'tiger','lname' => 'Tiger']);
-        \App\System::create(['name' => 'elephant','lname' => 'Elephant']);
-        \App\System::create(['name' => 'turtle','lname' => 'Turtle']);
-        \App\System::create(['name' => 'shark','lname' => 'Shark']);
-        \App\System::create(['name' => 'cobra','lname' => 'Cobra']);
-        \App\System::create(['name' => 'eagle','lname' => 'Eagle']);
     }
 
     /**

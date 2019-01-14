@@ -1,7 +1,7 @@
 @extends('en.layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" id="fx">
   <div class="row">
     <div class="col-md-12">
       @if(Auth::user()->auth <= 0)
@@ -11,59 +11,50 @@
         </a>
       </p>
       @endif
-      <div class="panel panel-default">
-       <div class="panel-heading">FX</div>
+      <!-- <div class="panel panel-default">
+       <div class="panel-heading">FX</div> -->
 
-       <a href="{{route('tiger')}}">
-         <div id="tiger" class="fx-card">
-          <div class="fx-icon"></div>
-          <h2>Tiger</h2>
-<!--           <p>sample sample sample sample sample sample sample sample sample sample</p>
- -->        </div>
-      </a>
+       @foreach($systems as $system)
 
-      <a href="{{route('elephant')}}">
-        <div id="elephant" class="fx-card">
-          <div class="fx-icon"></div>
-          <h2>Elephant</h2>
-<!--           <p>sample sample sample sample sample sample sample sample sample sample</p>
- -->        </div>
-      </a>
+       @php
+       
+       switch($system->name){
+       case 'alps':
+       $fontcolor = "#ffa128";
+       $bordercolor = "#fff684";
+       $profit = "??";
+       break;
+       case 'opera':
+       $fontcolor = "#ffffff";
+       $bordercolor = "#006619";
+       $profit = "??";
+       break;
+       case 'barrier':
+       $fontcolor = "#01045e";
+       $bordercolor = "#0d106d";
+       $profit = "??";
+       break;
+       default:
+       $fontcolor = $system->colorcode;
+       $bordercolor = $system->colorcode;
+       $profit = "14.28%";
+       break;
+     }
 
-      <a href="{{route('turtle')}}">
-        <div id="turtle" class="fx-card">
-          <div class="fx-icon"></div>
-          <h2>Turtle</h2>
-<!--           <p>sample sample sample sample sample sample sample sample sample sample</p>
- -->        </div>
-      </a>
+     @endphp
+     <a href="{{route('system.detail',$system->name)}}">
+       <div id="{{$system->name}}" class="fx-card">
+        <img src="{{url('/image/'.$system->name.'.jpg')}}" alt="{{$system->name}}">
+        <div class="fx-card-border" style="border-color:{{$bordercolor}};">
+          <h2 style="color:{{$fontcolor}};">{{$system->lname}}</h2>
+          <p style="text-align:center;color:{{$fontcolor}};">Monthly Profit：{{$profit}}</p>
+        </div>
+      </div>
+    </a>
+    @endforeach
 
-      <a href="{{route('shark')}}">
-        <div id="shark" class="fx-card">
-          <div class="fx-icon"></div>
-          <h2>Shark</h2>
-<!--           <p>sample sample sample sample sample sample sample sample sample sample</p>
- -->        </div>
-      </a>
-
-      <a href="{{route('cobra')}}">
-        <div id="cobra" class="fx-card">
-          <div class="fx-icon"></div>
-          <h2>Cobra</h2>
-<!--           <p>sample sample sample sample sample sample sample sample sample sample</p>
- -->        </div>
-      </a>
-
-      <a href="{{route('eagle')}}">
-        <div id="eagle" class="fx-card">
-          <div class="fx-icon"></div>
-          <h2>Eagle</h2>
-<!--           <p>sample sample sample sample sample sample sample sample sample sample</p>
- -->        </div>
-      </a>
-      
-    </div>
-  </div>
+<!--   </div>
+</div> -->
 </div>
 </div>
 @endsection

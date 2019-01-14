@@ -19,17 +19,25 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </style>
 </head>
-<body>
-    <div class="top-container">
-        <div class="content">
+<body id="top">
+    <!-- <div class="top-container"> -->
+        <!-- <div class="content"> -->
             <div class="title m-b-md">
-                <img src="/image/Savannah-FX.gif" alt="Savannah-FX">
+                <img src="{{url('image/logo_large.png')}}">
+            </div>
+            <div id="top-image">
+                <img src="{{url('image/top.jpg')}}" alt="{{config('app.name', 'Savannah-FX')}}">
             </div>
 
-            <a class="sign-in" href="{{route('login')}}">ログイン</a>
-            <a class="create-account" href="{{route('register')}}">新規登録</a>
+            <div class="col-md-6">
+                <a class="sign-in" href="{{route('login')}}">sign in</a>
+            </div>
+            <div class="col-md-6">
+                <a class="create-account" href="{{route('register')}}">register</a>
+            </div>
 
-        </div>
-    </div>
-</body>
-</html>
+            <!-- </div> -->
+            <!-- </div> -->
+            <script src="{{url('js/s_fx_divine.js')}}"></script>
+        </body>
+        </html>

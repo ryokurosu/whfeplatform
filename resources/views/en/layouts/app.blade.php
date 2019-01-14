@@ -51,7 +51,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'HighLow') }}
+                        <img src="{{url('image/logo.png')}}" alt="{{ config('app.name', 'HighLow') }}">
                     </a>
                 </div>
 
@@ -74,34 +74,10 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{route('register')}}">
-                                Account Opening
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{route('home')}}">
-                                Mypage
-                            </a>
-                        </li>
-                        <li>
                             <a href="{{route('fx')}}">
                                 FX
                             </a>
                         </li>
-                        <li>
-                            <a href="mailto:delivery.option.lenis@gmail.com">
-                                Contact（E-mail）
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
-                            Logout
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                {{ csrf_field() }}
-                            </form>
-                        </a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -109,19 +85,22 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
-                            <li>
-                                <a href="{{route('delivary')}}">
-                                    Delivary
-                                </a>
-                            </li>
-
-
-                            <li>
-                                <a href="https://line.me/R/ti/p/%40zez4436s">
+                             <li>
+                                <a href="">
                                     Support（LINE@）
                                 </a>
                             </li>
+                            <li>
+                                <a href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                Logout
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </a>
                             @if(Auth::user()->isAdmin())
+                            <hr>
                             <li>
                                 <a href="{{route('admin')}}">
                                     Admin page
@@ -135,16 +114,6 @@
                             <li>
                                 <a href="{{route('affiliater')}}">
                                     Affiliater manage
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('upload')}}">
-                                    file upload
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('filelist')}}">
-                                    file index
                                 </a>
                             </li>
                             @endif
