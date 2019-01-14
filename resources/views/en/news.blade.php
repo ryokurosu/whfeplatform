@@ -8,30 +8,9 @@
        <div class="panel-heading">News</div>
        <div class="panel-body">
          <div class="news-column">
-          <small>2018/09/02</small>
-          <h2>Alps has been updated.</h2>
+          <small>2019/01/01</small>
+          <h2>USL has been updated.</h2>
         </div>
-        <div class="news-column">
-          <small>2018/03/16</small>
-          <h2>Opera has been updated.</h2>
-        </div>
-        <div class="news-column">
-          <small>2018/03/16</small>
-          <h2>Barrier has been updated.</h2>
-        </div>
-
-       <!--  <div class="news-column">
-          <small>2018/03/16</small>
-          <h2>eagle has been updated.</h2>
-        </div>
-        <div class="news-column">
-          <small>2017/10/23</small>
-          <h2>cobla has been updated.</h2>
-        </div>
-        <div class="news-column">
-          <small>2017/07/09</small>
-          <h2>elephant has been updated.</h2>
-        </div> -->
       </div>
     </div>
   </div>

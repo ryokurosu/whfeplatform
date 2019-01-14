@@ -11,12 +11,11 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-    	if(config('app.debug')){
     		\App\User::create([
     			'name' => 'DEMOACCOUNT',
     			'email' => 'demo@gmail.com',
     			'auth' => -1,
-    			'password' => '$2y$10$lZ8N8dZnnAwJB7I0vsKKWuNI.i1w/ItIZTLHeZ3gTDKBY430exT.K',
+    			'password' => '$2y$10$zv9BS6/1pWUcTUSAhJXBNezmrSfpAAEyn46GCoOdHVN8egigqc2Ce',
     			'affiliater_id' => 0,
     			'gender' => '男',
     			'address' => 'DEMOMACHI1-1-1',
@@ -25,6 +24,5 @@ class UsersTableSeeder extends Seeder
     			'zipcode' => '111-1111'
     		]);
     		echo 'Demo User created.' . PHP_EOL;
-    	}
     }
 }
