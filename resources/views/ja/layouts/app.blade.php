@@ -85,7 +85,7 @@
 
                         <ul class="dropdown-menu" role="menu">
                             <li>
-                                <a href="">
+                                <a href="https://line.me/R/ti/p/%40der4914t" target="_blank" rel="nofollow">
                                     サポート（LINE@）
                                 </a>
                             </li>
