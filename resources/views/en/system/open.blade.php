@@ -10,20 +10,21 @@
         <p class="text-center">
           <img src="{{url('image/top.jpg')}}" alt="{{config('app.name')}}">
         </p>
-        <p>We have received application for use.</p>
-        <p>Please confirm that you have sent an e-mail to the registered e-mail address. (If it does not arrive it may be in the junk mail folder.)</p>
+        <p>Thank you for applying.</p>
+        <p>The procedure up to operation start is as follows.</p>
+        <p>① Please send "USL" message to "LINE @" linked with the WHFE platform.</p>
         <p></p>
-        <p>The contents of the attached e-mail are as follows.</p>
-        <p>· URL to account opening page</p>
-        <p>· Account opening manual</p>
-        <p>· Operation management manual</p>
-        <p>· MT4 application download URL</p>
+        <p>② We will send you account opening URL from LINE @ support.</p>
         <p></p>
-        <p>① Please refer to "Account opening manual" and open your account from "URL to account opening page".</p>
-        <p>② After the opening procedure is completed, "MT 4 ID" and "password" will be sent from the securities company to the registered e-mail address.</p>
-        <p>③ Please deposit the margin on your account.</p>
-        <p>(Because automatic transaction, operation is automatically started when payment is reflected.)</p>
-        <p>④ By referring to "Operation management manual", you can manage your own operation from "MT4 application download URL".</p>
+        <p>③ Please access the account opening URL and open an account based on the manual sent at LINE @ registration.</p>
+        <p></p>
+        <p>④ Please complete the identity verification based on the manual as well. (Principal confirmation may take about 2 business days to approve.)</p>
+        <p></p>
+        <p>⑤ Please make payment. ※ Please use bonus campaign by all means. For details, we will send you a message when registering LINE @.</p>
+        <p></p>
+        <p>⑥ Please operate USL based on the manual as well.</p>
+        <p></p>
+        <p>Operation starts with this.</p>
       </div>
     </div>
   </div>
