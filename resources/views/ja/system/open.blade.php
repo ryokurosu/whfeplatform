@@ -8,7 +8,7 @@
        <div class="panel-heading">利用申請を承りました</div>
        <div class="panel-body">
          <p class="text-center">
-          <img src="{{secure_url('image/top.jpg')}}" alt="{{config('app.name')}}">    
+          <img src="{{url('image/top.jpg')}}" alt="{{config('app.name')}}">    
         </p>
         <p>ご利用申請ありがとうございます。</p>
         <p>運用開始までの手順は以下になります。</p>

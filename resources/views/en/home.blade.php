@@ -13,7 +13,7 @@
       @endif
       <div class="panel">
         <a href="{{route('fx')}}">
-          <img src="{{secure_url('/image/top.jpg')}}" alt="{{config('app.name')}}">
+          <img src="{{url('/image/top.jpg')}}" alt="{{config('app.name')}}">
         </a>
       </div>
     </div>

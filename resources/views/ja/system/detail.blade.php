@@ -78,8 +78,8 @@
 
           @endif
           <div id="tab3" class="tab-pane">
-            <embed src="{{secure_url('/backtest/'.$system->name.'.pdf')}}" width="100%" height="375">
-              <a href="{{secure_url('/backtest/'.$system->name.'.pdf')}}">Detail (PDF)</a>
+            <embed src="{{url('/backtest/'.$system->name.'.pdf')}}" width="100%" height="375">
+              <a href="{{url('/backtest/'.$system->name.'.pdf')}}">Detail (PDF)</a>
             </div>
           </div>
           <div class="open-account-container">

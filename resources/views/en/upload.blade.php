@@ -25,7 +25,7 @@
 </div>
 </div>
 </div>
-<script src="{{ secure_asset('js/dropzone.min.js') }}"></script>
+<script src="{{ asset('js/dropzone.min.js') }}"></script>
 <script>
     Dropzone.options.imageUpload = {
         dictDefaultMessage: 'Please drug upload file',
