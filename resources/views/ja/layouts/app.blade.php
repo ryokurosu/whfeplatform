@@ -8,7 +8,7 @@
     <meta property="og:title" content="{{ config('app.name', 'HighLow') }}" >
     <meta property="og:type" content="website" >
     <meta property="og:url" content="{{url()->current()}}" >
-    <meta property="og:image" content="{{url('/thumbnail.png')}}">
+    <meta property="og:image" content="{{secure_url('/thumbnail.png')}}">
     <meta property="og:site_name" content="{{ config('app.name', 'HighLow') }}" >
     <meta property="og:description" content="{{ config('app.name', 'HighLow') }}" >
     <meta name="twitter:card" content="summary" >
@@ -31,8 +31,8 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
 
-    <link href="{{ asset('css/dropzone.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/dropzone.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -49,8 +49,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        <img src="{{url('image/logo.png')}}" alt="{{ config('app.name', 'HighLow') }}">
+                    <a class="navbar-brand" href="{{ secure_url('/') }}">
+                        <img src="{{secure_url('image/logo.png')}}" alt="{{ config('app.name', 'HighLow') }}">
                     </a>
                 </div>
 
@@ -130,7 +130,7 @@
 </div>
 
 <!-- Scripts -->
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ secure_asset('js/app.js') }}"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
 <script>
     (function($) {
