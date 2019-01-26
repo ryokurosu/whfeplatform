@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{{ config('app.name', 'Savannah-FX') }}</title>
-    <meta property="og:title" content="{{ config('app.name', 'Savannah-FX') }}" >
+      <meta property="og:title" content="{{ config('app.name', 'Savannah-FX') }}" >
     <meta property="og:type" content="website" >
     <meta property="og:url" content="{{url()->current()}}" >
     <meta property="og:image" content="{{url('/thumbnail.png')}}">
