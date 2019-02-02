@@ -1,4 +1,4 @@
-@extends('ja.layouts.app')
+@extends('en.layouts.app')
 
 @section('content')
 <div class="container" id="fx">
@@ -11,13 +11,14 @@
         </a>
       </p>
       @endif
-      <div class="panel panel-default">
-       <div class="panel-heading">FX</div>
+      <!-- <div class="panel panel-default">
+       <div class="panel-heading">FX</div> -->
 
        @foreach($systems as $system)
 
        @php
-      switch($system->name){
+       
+       switch($system->name){
        case 'alps':
        $fontcolor = "#ffa128";
        $bordercolor = "#fff684";
@@ -41,7 +42,7 @@
      }
 
      @endphp
-      <a href="{{route('system.detail',$system->name)}}">
+     <a href="{{route('system.detail',$system->name)}}">
        <div id="{{$system->name}}" class="fx-card">
         <img src="{{url('/image/'.$system->name.'.jpg')}}" alt="{{$system->name}}">
         <div class="fx-card-border" style="border-color:{{$bordercolor}};">
@@ -51,8 +52,9 @@
       </div>
     </a>
     @endforeach
-    </div>
-  </div>
+
+<!--   </div>
+</div> -->
 </div>
 </div>
 @endsection

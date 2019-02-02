@@ -23,15 +23,15 @@
           <div id="tab1" class="tab-pane active">
             <h3>Overview</h3>
             <p>Currency pair : EURUSD, GBPUSD</p>
-            <p>Transaction style  : Swing · Nampin Martin</p>
-            <p>Initial margin amount : 1,000,000JPY</p>
-            <p>Maximum number of positions  : 30</p>
+            <p>Transaction style  : Day</p>
+            <p>Initial margin amount : 1,000,000JPY <small>*avarable 100,000JPY or more</small></p>
+            <p>Maximum number of positions  : 10</p>
             <p>Usage time Foot : </p>
-            <p>Maximum stop loss  : 200pips</p>
-            <p>Maximum drawdown : 23%</p>
+            <p>Maximum stop loss  : 150pips</p>
+            <p>Maximum drawdown : 27%</p>
             <p>Both houses : on</p>
             <p>Product line : MT4</p>
-            <p>Fundamental stop：on</p>
+            <p>Fundamental stop：off</p>
             <p>Notice : Depending on the market price, currency pair, lot number will be selected</p>
           </div>
           <div id="tab2" class="tab-pane">
