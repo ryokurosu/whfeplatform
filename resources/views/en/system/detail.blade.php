@@ -17,6 +17,9 @@
           <li class="nav-item">
             <a href="#tab3" class="nav-link" data-toggle="tab">Backtest</a>
           </li>
+           <li class="nav-item">
+            <a href="#tab4" class="nav-link" data-toggle="tab">Manual</a>
+          </li>
         </ul>
         <div class="tab-content">
           @if($system->name == 'usl')
@@ -82,13 +85,18 @@
             <embed src="{{url('/backtest/'.$system->name.'.pdf')}}" width="100%" height="375">
               <a href="{{url('/backtest/'.$system->name.'.pdf')}}">Detail (PDF)</a>
             </div>
+            <div id="tab4" class="tab-pane">
+             <embed src="{{url('/gemforex.pdf')}}" width="100%" height="460">
+              <a href="{{url('/gemforex.pdf')}}">GemForex Manual</a>
+            </div>
           </div>
-          <div class="open-account-container">
-            <a class="btn btn-primary big" href="{{route('system.open',$system->name)}}">Open an account</a>
-          </div>
+        </div>
+        <div class="open-account-container">
+          <a class="btn btn-primary big" href="{{route('system.open',$system->name)}}">Open an account</a>
         </div>
       </div>
     </div>
   </div>
+</div>
 </div>
 @endsection

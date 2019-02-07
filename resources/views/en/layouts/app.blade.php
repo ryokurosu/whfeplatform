@@ -91,6 +91,11 @@
                                 </a>
                             </li>
                             <li>
+                                <a href="{{url('/gemforex.pdf')}}" target="_blank" rel="nofollow">
+                                    Latest News
+                                </a>
+                            </li>
+                            <li>
                                 <a href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">

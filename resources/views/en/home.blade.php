@@ -19,6 +19,10 @@
     </div>
     <div class="clear"></div>
     <div class="col-md-12">
+      <div class="panel">
+        <embed src="{{url('/gemforex.pdf')}}" width="100%" height="460">
+        <a href="{{url('/gemforex.pdf')}}">GemForex Manual</a>
+      </div>
       <div class="panel panel-default">
        <div class="clear"></div>
        <div class="panel-heading">News</div>
