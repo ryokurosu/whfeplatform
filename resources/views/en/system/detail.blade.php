@@ -27,7 +27,7 @@
             <h3>Overview</h3>
             <p>Currency pair : EURUSD, GBPUSD</p>
             <p>Transaction style  : Day</p>
-            <p>Initial margin amount : 1,000,000JPY <small>*avarable 100,000JPY or more</small></p>
+            <p>Initial margin amount : 100,000JPY</p>
             <p>Maximum number of positions  : 10</p>
             <p>Usage time Foot : </p>
             <p>Maximum stop loss  : 150pips</p>

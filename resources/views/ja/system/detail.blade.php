@@ -27,7 +27,7 @@
             <h3>概要</h3>
             <p>通貨ペア : EURUSD, GBPUSD</p>
             <p>取引スタイル  : Day</p>
-            <p>初期証拠金金額 : 1,000,000JPY <small>*avarable 100,000JPY or more</small></p>
+            <p>初期証拠金金額 : 100,000JPY</p>
             <p>最大ポジション数  : 10</p>
             <p>使用時間足 : </p>
             <p>最大ストップロス  : 150pips</p>
